@@ -1,0 +1,23 @@
+[workspace]
+members = [
+    "apps/desktop/src-tauri",
+    "crates/*",
+    "daemon"
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/aman/vainy"
+authors = ["Aman Deep"]
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.38", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+color-eyre = "0.6"
+anyhow = "1.0"
+thiserror = "1.0"
