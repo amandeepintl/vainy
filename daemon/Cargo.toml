@@ -1,0 +1,27 @@
+[package]
+name = "vainy-daemon"
+version = "0.1.0"
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+color-eyre = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Workspace crates
+vainy-battery = { path = "../crates/battery" }
+vainy-gpu = { path = "../crates/gpu" }
+vainy-thermal = { path = "../crates/thermal" }
+vainy-power = { path = "../crates/power" }
+vainy-keyboard = { path = "../crates/keyboard" }
+vainy-telemetry = { path = "../crates/telemetry" }
+vainy-system = { path = "../crates/system" }
+vainy-updater = { path = "../crates/updater" }
+vainy-platform = { path = "../crates/platform" }
