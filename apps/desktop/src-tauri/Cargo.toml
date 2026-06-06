@@ -1,0 +1,30 @@
+[package]
+name = "vainy-desktop"
+version = "0.1.0"
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0", features = ["devtools"] }
+tauri-plugin-shell = "2.0"
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Workspace crates
+vainy-battery = { path = "../../../crates/battery" }
+vainy-gpu = { path = "../../../crates/gpu" }
+vainy-thermal = { path = "../../../crates/thermal" }
+vainy-power = { path = "../../../crates/power" }
+vainy-keyboard = { path = "../../../crates/keyboard" }
+vainy-telemetry = { path = "../../../crates/telemetry" }
+vainy-system = { path = "../../../crates/system" }
+vainy-updater = { path = "../../../crates/updater" }
+vainy-platform = { path = "../../../crates/platform" }
