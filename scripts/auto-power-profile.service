@@ -1,0 +1,12 @@
+[Unit]
+Description=Vainy Standalone Auto Power Profile Switcher
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/auto-power-profile.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
