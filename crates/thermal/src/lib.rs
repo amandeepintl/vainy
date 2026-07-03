@@ -148,7 +148,7 @@ pub fn get_thermal_stats() -> Result<ThermalStats> {
     };
 
     // Map 0-100% speed to 0-5800 RPM (Lenovo LOQ maximum thermal ceiling)
-    let fan_speed_rpm = ((speed_pct / 100.0) * 5000.0) as u32;
+    let fan_speed_rpm = ((speed_pct / 100.0) * 5800.0) as u32;
 
     Ok(ThermalStats {
         cpu_temp,
