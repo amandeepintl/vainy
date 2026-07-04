@@ -74,9 +74,9 @@ export const Thermals: React.FC = () => {
                   onChange={(e) => updatePointSpeed(i, Number(e.target.value))}
                   className="flex-1 accent-primary bg-border rounded-lg h-1.5 appearance-none cursor-pointer"
                 />
-                <div className="w-12 text-right text-xs font-mono font-bold text-primary">
-                  {pt.speed}%
-                  
+                <div className="w-24 text-right text-xs font-mono font-bold text-primary flex justify-end gap-1">
+                  <span>{pt.speed}%</span>
+                  <span className="text-text-secondary">({Math.round((pt.speed / 100) * 5800)} RPM)</span>
                 </div>
               </div>
             ))}
